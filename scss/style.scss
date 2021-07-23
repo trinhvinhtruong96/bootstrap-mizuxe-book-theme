@@ -27,6 +27,22 @@ body {
     min-height: 600px;
 }
 
+#authors {
+    img{
+        margin-top: -50px;
+    }
+
+    .card:hover {
+        background: $primary;
+        color: #fff;
+
+        .fab {
+            color: #fff;
+        }
+    }
+
+}
+
 @media (max-width: 768px) {
     #showcase {
         min-height: 500px;
