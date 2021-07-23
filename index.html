@@ -12,9 +12,9 @@
   <title>Bootstrap Theme</title>
 </head>
 
-<body>
+<body id="home" data-spy="scroll" data-target="#main-nav">
   <!-- START HERE -->
-  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" id="main-nav">
     <div class="container">
       <a href="#home" class="navbar-brand">
         <img src="./img/mlogo.png" alt="Logo" class="img-fluid" width="50" height="50">
@@ -384,6 +384,19 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
+  <footer id="main-footer" class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-6 ml-auto">
+          <p class="lead">
+            Copyright &copy; <span id="year"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -397,6 +410,28 @@
   <script>
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());
+  </script>
+  <script>
+    $('body').scrollspy({ target: '#main-nav' });
+
+    // Add smooth scrolling
+    $('#main-nav a').on('click', function (e) {
+      // Check for a hash value
+      if (this.hash !== '') {
+        // Prevent default behavior
+        e.preventDefault();
+
+        // Store hash
+        const hash = this.hash
+        // Animate smooth scroll
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function () {
+          // Add hash to URL after scroll
+          window.location.hash = hash;
+        })
+      }
+    });
   </script>
 </body>
 
