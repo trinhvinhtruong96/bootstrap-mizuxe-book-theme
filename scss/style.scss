@@ -23,7 +23,7 @@ body {
 }
 
 #showcase {
-    background: linear-gradient(0,$primary-overlay,$primary-overlay), url(/img/mountains.jpg);
+    background: linear-gradient(0,$primary-overlay,$primary-overlay), url("../img/mountains.jpg");
     min-height: 600px;
 }
 
