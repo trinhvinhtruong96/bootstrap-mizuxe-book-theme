@@ -16,6 +16,7 @@ body {
 
 #showcase {
   background: linear-gradient(0, rgba(50, 146, 166, 0.8), rgba(50, 146, 166, 0.8)), url("../img/mountains.jpg");
+  background-attachment: fixed;
   min-height: 600px; }
 
 #authors img {

@@ -24,6 +24,7 @@ body {
 
 #showcase {
     background: linear-gradient(0,$primary-overlay,$primary-overlay), url("../img/mountains.jpg");
+    background-attachment: fixed;
     min-height: 600px;
 }
 
